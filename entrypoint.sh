@@ -17,7 +17,7 @@ domain=$(echo "$url" | cut -d'@' -f2 | cut -d':' -f1)
 # Scan the SSH key for the git server and add it to known_hosts (prevent known hosts [yes|no] prompts)
 ssh-keyscan -H "$domain" >> "/root/.ssh/known_hosts"
 # Ensure that the ssh command uses the known_hosts file
-export GIT_SSH_COMMAND="ssh -o UserKKnownHostsFile=/root/.ssh/known_hosts -i /root/.ssh/id_ed25519"
+export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/root/.ssh/known_hosts -i /root/.ssh/id_ed25519"
 # Clone the repositoy  into the 'repo' directory
 git clone "$URL" repo
 if [ ! -d "repo" ]; then
