@@ -1,6 +1,6 @@
 #!/bin/bash
 # Check we were passed the expected arguments
-if [ -z "$1"]; then
+if [ -z "$1" ]; then
   echo "Please pass the git repository you wish to work in as the first argument!"
   echo "Example:"
   echo "docker run --it -v ~/.ssh/:root/.ssh:ro -v ~/.gitconfig:/root/.gitconfig:ro lazyvim-container-base:latest git@githost.com:user/repo.git"
