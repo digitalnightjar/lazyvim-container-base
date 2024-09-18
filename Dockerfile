@@ -2,7 +2,7 @@ FROM ubuntu:latest
 LABEL maintainer="Karl Eyre <digitalnightjar@outlook.com>"
 # Base packages
 RUN apt update && apt install -y sudo curl git-core gnupg zsh wget locales software-properties-common openssh-client
-RUN locale-get en_GB.UTF-8
+RUN locale-gen en_GB.UTF-8
 # Install base environment tools
 RUN add-apt-repository ppa:neovim-ppa/stable -y
 RUN apt update
